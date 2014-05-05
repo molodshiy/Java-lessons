@@ -65,7 +65,7 @@ public class Ex5Main {
 			}
 			
 		System.out.println(Arrays.toString(param));
-			
+		//Визиваємо метед passavord в класі Ex5;	
 		try {
 			System.out.print(Ex5.passavord(length, param));
 		} catch (NoSuchAlgorithmException e1) {
