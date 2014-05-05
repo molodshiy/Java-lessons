@@ -3,6 +3,7 @@ package May;
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class Ex6TryToGues {
 
 	private static Scanner sc;
