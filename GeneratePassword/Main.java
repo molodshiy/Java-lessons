@@ -25,7 +25,7 @@ public class Ex5Main {
 		
 		System.out.println("Введіть довжину пароля від 1 до 32767");
 		//Перевіряємо чи введено число;
-		while(true){
+	ww:	while(true){
 		while(!s.hasNextShort()){
 			System.out.println("Введіть довжину пароля від 1 до 32767");
 			s.next();
