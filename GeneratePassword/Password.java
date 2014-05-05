@@ -5,7 +5,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
 public class Ex5 {
-	
 	public static String passavord(int length, int[] arr) throws NoSuchAlgorithmException {
 		
 	   SecureRandom sr1 = SecureRandom.getInstance("SHA1PRNG");
