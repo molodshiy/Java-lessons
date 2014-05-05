@@ -1,0 +1,26 @@
+package May;
+
+
+import java.io.IOException;
+
+public class Ex1Main {
+
+	public static void main(String[] args) throws IOException{
+		
+		String pathText = "c:\\ttr\\text.txt";
+		String pathNumber = "c:\\ttr\\number.txt";
+		String pathMail = "c:\\ttr\\mail.txt";
+		
+		Ex1Reader r = new Ex1Reader(pathText);
+
+		String text1 = r.reader();
+		System.out.println(text1);
+		
+		Ex1Parser p = new Ex1Parser(text1);
+		p.parserN();
+		p.parserM();
+		
+		Ex1Saver s = new Ex1Saver(pathNumber, pathMail);
+		s.saver();
+	}
+}
