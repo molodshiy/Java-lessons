@@ -31,7 +31,7 @@ public class Ex5 {
 			for(byte g = 0; g < 10; g++)
 				elements += String.valueOf(g);  
 		}
-		//Розмір діапазону вибору
+		//Довжина діапазону
 		diapazone += elements.length();
 		   
 		//Генерація пароля
