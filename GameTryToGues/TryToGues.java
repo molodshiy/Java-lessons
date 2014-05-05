@@ -49,3 +49,4 @@ public class Ex6TryToGues {
 		}		
 	}
 }
+
