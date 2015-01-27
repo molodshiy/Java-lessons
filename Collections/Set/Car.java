@@ -1,4 +1,4 @@
-public class Car1 {
+public class Car {
     
     /* This class has override methods equels and hashCode for HashSet*/
     
