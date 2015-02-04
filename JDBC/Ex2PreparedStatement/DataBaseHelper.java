@@ -1,6 +1,3 @@
-import UnitJDBS.Ex1DriverManager.Abonent;
-import UnitJDBS.Ex1DriverManager.ConnectorDB;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
