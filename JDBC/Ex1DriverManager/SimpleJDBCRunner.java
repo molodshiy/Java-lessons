@@ -17,13 +17,13 @@ public class SimpleJDBCRunner {
 
         DriverManager.registerDriver(new com.mysql.jdbc.Driver());
 
-        try { // 1 блок
+        try { // 1
             cn = DriverManager.getConnection(url, prop);
             Statement st = null;
-            try { // 2 блок
+            try { // 2
                 st = cn.createStatement();
                 ResultSet rs = null;
-                try { // 3 блок
+                try { // 3
                     rs = st.executeQuery("SELECT * FROM phonebook");
                     ArrayList<Abonent> lst = new ArrayList<>();
                     while (rs.next()) {
@@ -37,29 +37,29 @@ public class SimpleJDBCRunner {
                     } else {
                         System.out.println("Not found");
                     }
-                } finally { // для 3-го блока try
+                } finally {
 /*
 * close ResultSet
 */
-                    if (rs != null) { // был ли создан ResultSet
+                    if (rs != null) {
                         rs.close();
                     } else {
                         System.err.println(
-                                "ошибка во время чтения из БД");
+                                "Error with database!");
                     }
                 }
             } finally {
 /*
 * close Statement
 */
-                if (st != null) { // для 2-го блока try
+                if (st != null) { // for 2
                     st.close();
                 } else {
-                    System.err.println("Statement не создан");
+                    System.err.println("Statement did not create!");
                 }
             }
 
-        } catch (SQLException e) { // для 1-го блока try
+        } catch (SQLException e) { // for 1
             System.err.println("DB connection error: " + e);
 
         } finally {
