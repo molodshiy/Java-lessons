@@ -10,7 +10,7 @@ public class CLientSocket {
         Socket socket = null;
         
         try {
-            socket = new Socket("127.0.0.1", 8030);
+            socket = new Socket("127.0.0.1", 8030);                     // "127.0.0.1" or InetAddress.getLocalHost()
             br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             String message = br.readLine();
             System.out.println(message);
