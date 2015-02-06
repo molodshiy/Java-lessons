@@ -1,5 +1,3 @@
-package UnitNet.UDPSender;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -8,14 +6,11 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketTimeoutException;
 
-/**
- * Created by Vania on 06.02.15.
- */
 public class UDPRecipient {
     public static void main(String[] args) {
         File file = new File("F:\\Films\\Friends.in2.txt");
-        System.out.println("Прием данных...");
-// прием файла
+        System.out.println("...");
+
         acceptFile(file, 8033, 1024);
     }
     private static void acceptFile(File file, int port, int pacSize) {
@@ -23,8 +18,7 @@ public class UDPRecipient {
         DatagramPacket pac = new DatagramPacket(data, data.length);
         try (FileOutputStream os = new FileOutputStream(file)) {
             DatagramSocket s = new DatagramSocket(port);
-/* установка времени ожидания: если в течение 60 секунд
-не принято ни одного пакета, прием данных заканчивается */
+
             s.setSoTimeout(60_000);
             while (true) {
                 s.receive(pac);
@@ -32,8 +26,8 @@ public class UDPRecipient {
                 os.flush();
             }
         } catch (SocketTimeoutException e) {
-// если время ожидания вышло
-            System.err.println("Истекло время ожидания, прием данных закончен");
+
+            System.err.println("");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
